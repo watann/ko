@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #e0f2f1; /* Light blue background */
+            color: #333; /* Dark text */
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            height: 86vh;
+            width: 75%;
+            padding: 0 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            z-index: 10;
+            border: 2px solid #2196f3; /* Blue border */
+            border-radius: 20px;
+            display: flex;
+            backdrop-filter: blur(15px); /* Blurred background */
+            box-shadow: -15px 17px 17px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+        }
+
+        nav {
+            height: 7%;
+            width: 90%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 15px auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            text-decoration: none;
+            color: #2196f3; /* Blue */
+            margin-left: 30px;
+        }
+
+        .logo::first-letter {
+            color: #64b5f6; /* Light Blue */
+            font-size: 35px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #2196f3; /* Blue */
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #64b5f6; /* Light Blue */
+        }
+
+        .content {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 8%;
+            padding-left: 80px;
+        }
+
+        .section-1 {
+            position: relative;
+            width: 40%;
+        }
+
+        .section-1 h1 {
+            margin-bottom: 33px;
+            font-size: 44px;
+            font-weight: 700;
+            color: #2196f3; /* Blue */
+        }
+
+        .section-1 h3 {
+            font-size: 44px;
+            color: #64b5f6; /* Light Blue */
+            margin-bottom: 10px;
+        }
+
+        .section-1 p {
+            font-size: 15px;
+            color: #2196f3; /* Blue */
+            margin-bottom: 50px;
+        }
+
+        .btn {
+            padding: 15px 20px;
+            border-radius: 25px;
+            background-color: #64b5f6; /* Light Blue */
+            border: none;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.3s;
+            color: #fff; /* White */
+        }
+
+        .btn:hover {
+            background-color: #2196f3; /* Blue */
+        }
+
+        .section-2 {
+            width: 88%;
+            position: relative;
+        }
+
+        .section-2 img {
+            width: 76%;
+        }
+
+        .social {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            position: absolute;
+            left: 10px;
+            top: 36%;
+        }
+
+        .social a i {
+            font-size: 25px;
+            color: #2196f3; /* Blue */
+            transition: 0.3s;
+        }
+
+        .social i:hover {
+            color: #64b5f6; /* Light Blue */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px; 
+            }
+            .box {
+                flex-direction: column; 
+                height: auto; 
+                padding: 20px; 
+                width: 100%; 
+            }
+            nav {
+                height: auto; 
+                width: 100%; 
+                position: static; 
+                margin: 0; 
+                padding: 10px 0; 
+            }
+            .logo {
+                margin-left: 0; 
+                text-align: center; 
+                margin-bottom: 10px; 
+            }
+            .content {
+                flex-direction: column; 
+                margin-top: 20px; 
+                padding: 0; 
+            }
+            .content .section-1,
+            .content .section-2 {
+                width: 100%; 
+                text-align: center; 
+            }
+            .content .section-1 h1 {
+                font-size: 30px; 
+            }
+            .content .section-1 h3 {
+                font-size: 35px; 
+            }
+            .content .section-2::after {
+                display: none; 
+            }
+            .content .social {
+                position: static; 
+                margin-top: 20px; 
+                text-align: center; 
+            }
+            .content .social a {
+                display: inline-block; 
+            }
+        }
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <div class="box">
+            <nav>
+                <a href="#" class="logo">Karwan Hassan </a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Connect</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="section-1">
+                    <h1>Hey, I'm Karwan</h1>
+                    <h3>I'm a <span class="multt"></span> </h3>
+                    <p>My buddies and I live by the motto: "Conquer or Die".</p>
+                    <a href="#" class="btn">Get My CV</a>
+                </div>
+                <div class="section-2">
+                    <img src="boy.png" alt="">
+                </div>
+                <div class="social">
+                    <a href="https://www.facebook.com/profile.php?id=61556981999961">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>   
+var typingEffect = new Typed(".multt", {
+    strings : ["Networking","Programer","Designer","Youtuber"],
+    loop : true , 
+    typeSpeed :100,
+    backSpeed: 80,
+    backDelay : 1500,
+})
+</script>
+</body>
+</html>

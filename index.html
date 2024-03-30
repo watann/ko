@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خشتەی یاری</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<!-- Input Text Box for Number of Players -->
+<div class="input-container">
+  <label for="playerCountInput">ژمارەی خشتەکان</label>
+  <input type="number" id="playerCountInput">
+</div>
+
+<!-- Input Text Box for Player Names -->
+<div class="input-container">
+  <label for="playerNamesInput">ناوی یاریزان</label>
+  <textarea id="playerNamesInput" rows="4"></textarea>
+</div>
+
+<!-- Input Text Box for Game Number -->
+<div class="input-container">
+  <label for="gameNumberInput">ژمارەی یاری</label>
+  <input type="number" id="gameNumberInput">
+</div>
+
+<!-- Button to Add -->
+<div class="button-container">
+  <button id="addButton">Add</button>
+</div>
+
+<!-- Container for Table -->
+<div id="tableContainer"></div>
+
+<script src="tableUtils.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
